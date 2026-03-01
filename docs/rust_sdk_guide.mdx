@@ -53,7 +53,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         text: "Hello! Welcome to Camb.ai text-to-speech.".to_string(),
         language: CreateStreamTtsRequestPayloadLanguage::EnUs,
         voice_id: 147320,
-        speech_model: Some(CreateStreamTtsRequestPayloadSpeechModel::MarsFlash),
+        speech_model: Some(CreateStreamTtsRequestPayloadSpeechModel::Mars8Flash),
         output_configuration: Some(StreamTtsOutputConfiguration {
             format: Some(OutputFormat::Wav),
             ..Default::default()
@@ -106,25 +106,25 @@ Camb.ai offers three MARS models optimized for different use cases:
 <Tabs>
   <Tab title="MARS Flash">
     ```rust
-    speech_model: Some(CreateStreamTtsRequestPayloadSpeechModel::MarsFlash)
+    speech_model: Some(CreateStreamTtsRequestPayloadSpeechModel::Mars8Flash)
     ```
 
     **Best for:** Real-time voice agents, low-latency applications
 
     **Sample rate:** 22.05kHz
   </Tab>
-  <Tab title="MARS Pro">
+  {/* <Tab title="MARS Pro">
     ```rust
-    speech_model: Some(CreateStreamTtsRequestPayloadSpeechModel::MarsPro)
+    speech_model: Some(CreateStreamTtsRequestPayloadSpeechModel::Mars8Pro)
     ```
 
     **Best for:** Audio production, high-quality content
 
     **Sample rate:** 48kHz
-  </Tab>
+  </Tab> */}
   <Tab title="MARS Instruct">
     ```rust
-    speech_smodel: Some(CreateStreamTtsRequestPayloadSpeechModel::MarsInstruct),
+    speech_model: Some(CreateStreamTtsRequestPayloadSpeechModel::Mars8Instruct),
     user_instructions: Some("Speak in a warm, friendly tone".to_string()),
     ```
 
